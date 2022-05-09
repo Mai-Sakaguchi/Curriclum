@@ -1,0 +1,13 @@
+ルートブリッジ→switch3
+
+switch1 F0/1 DP　対向ポートのswitch2 F0/1がRPだから
+        F0/2 RP　switch1からswitch2へのルートパスコストが小さいから
+
+switch2 F0/1 RP　switch2からswitch3へのルートパスコストが小さいから
+        F0/2 BP　ルートパスコストが大きく、対向ポートがRPではないから
+
+switch3 E0/1 DP　switch3がルートブリッジで、対向ポートがRPだから
+        E0/2 DP　switch3がルートブリッジで、対向ポートがRPだから
+
+switch4 E0/1 BP　ルートパスコストが大きく、対向ポートがRPではないから
+        E0/2 RP　switch4からswitch3へのルートパスコストが小さいから
